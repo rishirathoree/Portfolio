@@ -16,12 +16,12 @@ const Home = () => {
             </div>
             <div>
               <p className="font-lighter text-3xl">Hy, I'm Rishi</p>
-              <div className="flex items-center">
+              <div className="flex sm:flex-col md:flex-row lg:flex-row">
                 <p className="font-lighter mr-1 text-3xl">I Design</p>
                 <Textslider />
               </div>
             </div>
-            <Link to="/">
+            <Link to="">
               <span className="font-semibold lg:hidden sm:block w-min md:hidden hover:text-white hover:bg-black duration-500 lg:text-md md:text-md sm:text-md px-3 py-2 rounded-xl bg-[#F6ECFF]">
                 About
               </span>
