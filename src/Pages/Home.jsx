@@ -7,7 +7,6 @@ import dp from "../Images/dp.jpg";
 import 'boxicons/css/boxicons.min.css'
 import resume from '../resume.pdf'
 const Home = () => {
-  console.log(resume);
   return (
     <>
       <div className="w-full h-full">
