@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import qualifywebImg from "../Images/qualifyweb.jpg";
 import shoeswebImg from "../Images/shoesweb.png";
 import dp from "../Images/dp.jpg";
-import Footer from "../components/Footer";
+import 'boxicons/css/boxicons.min.css'
+import resume from '../resume.pdf'
 const Home = () => {
+  console.log(resume);
   return (
     <>
       <div className="w-full h-full">
@@ -21,11 +23,12 @@ const Home = () => {
                 <Textslider />
               </div>
             </div>
-            <Link to="">
-              <span className="font-semibold lg:hidden sm:block w-min md:hidden hover:text-white hover:bg-black duration-500 lg:text-md md:text-md sm:text-md px-3 py-2 rounded-xl bg-[#F6ECFF]">
-                About
-              </span>
-            </Link>
+            <a href={resume} download='resume' >
+  <span className="font-semibold mt-2 text-center flex items-center justify-center lg:hidden sm:block w-40 select-none md:hidden hover:text-white hover:bg-black duration-500 lg:text-md md:text-md sm:text-md px-3 py-2 rounded-xl bg-[#F6ECFF]">
+    <i className="bx bx-receipt"></i> Download CV
+  </span>
+</a>
+
           </div>
         </div>
         <div>

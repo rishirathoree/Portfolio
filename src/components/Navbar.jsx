@@ -1,14 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import 'boxicons/css/boxicons.min.css';
-
+import resume from '../resume.pdf'
 const Navbar = () => {
   return (
     <div className='py-8 lg:px-40 md:px-12 sm:px-12 duration-700 justify-between items-center flex'>
         <div className='sm:hidden md:block'>
-            <NavLink to="/">
-                <p className='font-semibold hover:text-white hover:bg-black duration-500 lg:text-md md:text-md sm:text-md px-3 py-2 rounded-xl bg-[#F6ECFF]'>About</p>
-            </NavLink>
+<a href={resume} download='resume'>
+    
+                <p className='font-semibold hover:text-white hover:bg-black duration-500 lg:text-md md:text-md sm:text-md px-3 py-2 rounded-xl bg-[#F6ECFF]'>Resume</p>
+</a>
+
         </div>
         <div>
             <NavLink to="/">
