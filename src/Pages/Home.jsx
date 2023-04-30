@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Textslider from "../components/Textslider";
 import { Link } from "react-router-dom";
 import qualifywebImg from "../Images/qualifyweb.jpg";
@@ -9,9 +9,44 @@ import 'boxicons/css/boxicons.min.css'
 import resume from '../resume.pdf'
 
 const Home = () => {
+  const [shimmer, setShimmer] = useState(false);
+useEffect(() => {
+  const timeoutId = setTimeout(() => {
+    setShimmer(true);
+  }, 5000);
+
+  return () => {
+    clearTimeout(timeoutId);
+  };
+}, []);
+
   return (
     <>
-      <div className="w-full h-full">
+    {!shimmer ? 
+    <>
+    <div className="w-full h-full p-12">
+      <div className="w-full h-full py-12 flex items-center justify-center">
+        <div className="flex lg:flex-row md:flex-row sm:flex-col  items-center gap-8">
+          <div className="w-28 h-28 bg-gray-100 animate-pulse rounded-3xl"></div>
+          <div className="gap-4">
+            <div className="w-60 h-8 mb-4 bg-gray-100 animate-pulse"></div>
+            <div className="w-60 h-8 bg-gray-100 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-full py-12 flex items-center flex-col justify-center">
+        <div className="w-40 h-8 mb-12 bg-gray-100 animate-pulse"></div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
+          <div className="w-[300px] h-[300px] rounded-3xl bg-gray-100 animate-pulse"></div>
+          <div className="w-[300px] h-[300px] rounded-3xl bg-gray-100 animate-pulse"></div>
+          <div className="w-[300px] lg:block md:hidden sm:hidden h-[300px] rounded-3xl bg-gray-100 animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+    </> 
+    :
+    <>
+    <div className={`w-full h-full duration-500 ${shimmer ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         <div className="lg:py-20 md:py-12 sm:py-12 px-12 flex sm:items-center sm:justify-start md:justify-center lg:justify-center">
           <div className="flex sm:items-left md:items-center lg:items-center lg:flex-row md:flex-row sm:flex-col justify-between lg:gap-8 md:gap-4 sm:gap-4">
             <div className="w-28 overflow-hidden rounded-3xl h-28 bg-gray-100">
@@ -58,6 +93,9 @@ const Home = () => {
         </div>
         </div>
       </div>
+      </>    
+    }
+      
     </>
   );
 };
