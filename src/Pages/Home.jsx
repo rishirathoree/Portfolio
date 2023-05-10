@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Textslider from "../components/Textslider";
 import { Link } from "react-router-dom";
-import qualifywebImg from "../Images/qualifyweb.jpg";
+import qualifywebImg from "../Images/qualifyweb.png";
 import shoeswebImg from "../Images/shoesweb.png";
+import developer from "../Images/developer.png";
 import netflix from "../Images/netflix.png";
 import dp from "../Images/dp.jpg";
 import 'boxicons/css/boxicons.min.css'
@@ -71,23 +72,29 @@ useEffect(() => {
         <p className="font-light text-center text-3xl">Projects</p>
         <div className="flex justify-center items-center p-12">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
-            <Link to="https://vp8hd8-5173.csb.app/">
+            <Link to="https://radiant-kulfi-da4367.netlify.app/">
+            <div className="w-full duration-150 hover:shadow-xl overflow-hidden rounded-2xl border ">
+              <img src={developer} className="w-full h-full" alt="" />
+            </div>
+              <p className="font-light text-xsm py-4">Developer Landing Page</p>
+            </Link>
+            <Link to="https://euphonious-marigold-bc95b8.netlify.app/">
             <div className="w-full duration-150 hover:shadow-xl overflow-hidden rounded-2xl border ">
               <img src={qualifywebImg} className="w-full h-full" alt="" />
             </div>
-              <p className="font-light text-xsm">Quatify - API Calls</p>
+              <p className="font-light text-xsm py-4">Quatify - API Calls</p>
             </Link>
             <Link to="https://chimerical-pasca-a126cb.netlify.app/">
             <div className="w-full duration-150 hover:shadow-xl overflow-hidden rounded-2xl border ">
               <img src={shoeswebImg} className="w-full h-full" alt="" />
             </div>
-            <p className="font-light text-xsm">Kicsknation - API Calls,Redux Complex State Management & Firebase Authentication</p>
+            <p className="font-light text-xsm py-4">Kicsknation - API Calls,Redux Complex State Management & Firebase Authentication</p>
             </Link>
             <Link to="https://peppy-hummingbird-40ede8.netlify.app/">
             <div className="w-full duration-150 hover:shadow-xl overflow-hidden rounded-2xl border ">
               <img src={netflix} className="w-full h-full object-cover" alt="" />
             </div>
-            <p className="font-light text-xsm">Netflix Clone - Multiple API Calls,Redux Complex Tree State Management & Firebase Authentication</p>
+            <p className="font-light text-xsm py-4">Netflix Clone - Multiple API Calls,Redux Complex Tree State Management & Firebase Authentication</p>
             </Link>
           </div>
         </div>
